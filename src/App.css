@@ -1,0 +1,35 @@
+.SmallScreenContent {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+}
+SmallScreenContent h1 {
+  color: #333;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+.SmallScreenContent h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.SmallScreenContent p {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.SmallScreenContent button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.SmallScreenContent button:hover {
+  background-color: #0056b3;
+}
