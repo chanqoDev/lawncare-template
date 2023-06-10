@@ -1,0 +1,27 @@
+.mobile-menu-paper {
+  width: 100%;
+  padding: 0;  
+  margin: 0;
+}
+
+.mobile-menu-paper li {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  background-color: #164801;
+  font-weight: 600;
+  color: white;
+  transition: background-color 0.9s, color 0.3s;
+  border: "solid #164801 0.1px"
+}
+
+.mobile-menu-paper li:hover {
+  background-color: #e0e0e0;
+  color: #164801;
+}
+
+.mobile-menu-paper a {
+  text-decoration: none;
+  color: #e0e0e0;
+}
