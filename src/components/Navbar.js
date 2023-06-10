@@ -34,7 +34,7 @@ export default function Navbar() {
 
   const ContactBanner = styled(Typography)`
     padding: 8px;
-    background-color: #164801;
+    background-color: #1e272e;
     font-size: 14px;
     display: flex;
     align-items: center;
@@ -82,12 +82,12 @@ export default function Navbar() {
               aria-haspopup="true"
               onClick={handleMobileMenuOpen}
               sx={{
-                borderRadius: 0,
+                borderRadius: 1,
                 backgroundColor: "",
                 color: "#164801",
                 border: "solid #164801 0.1px",
                 "& svg": {
-                  fontSize: "2.565rem",
+                  fontSize: "1.5rem",
                 },
               }}
             >
@@ -109,11 +109,11 @@ export default function Navbar() {
             </Menu>
           </div>
         ) : (
-          <div style={{ display: "flex" }}>
-            <MenuItem>Home</MenuItem>
-            <MenuItem>About</MenuItem>
-            <MenuItem>Services</MenuItem>
-            <MenuItem>Contact</MenuItem>
+          <div style={{ display: "flex" }} className="MenutItems">
+            <MenuItem style={{ fontSize: "x-large" }}>Home</MenuItem>
+            <MenuItem style={{ fontSize: "x-large" }}>About</MenuItem>
+            <MenuItem style={{ fontSize: "x-large" }}>Services</MenuItem>
+            <MenuItem style={{ fontSize: "x-large" }}>Contact</MenuItem>
           </div>
         )}
       </Toolbar>
