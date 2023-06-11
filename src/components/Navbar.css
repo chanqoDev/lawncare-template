@@ -8,12 +8,11 @@
   height: 60px;
   display: flex;
   align-items: center;
-  padding: 0 16px;
-  background-color: #1e272e;
+  background-color:  #135d8b;
   font-weight: 600;
   color: white;
   transition: background-color 0.9s, color 0.3s;
-  border: "solid #164801 0.1px"
+  border: solid black 0.1px; 
 }
 
 .mobile-menu-paper li:hover {
@@ -25,4 +24,7 @@
   text-decoration: none;
   color: #e0e0e0;
 }
-
+.mobile-menu-paper ul {
+  padding: 0; 
+}
+ 

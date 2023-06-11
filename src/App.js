@@ -3,7 +3,8 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import "./App.css";
 import Navbar from "./components/Navbar";
-
+import HeroBanner from "./components/HeroBanner";
+import "./components/smallScreenContent.css";
 export default function App() {
   const theme = useTheme();
   const matchesSm = useMediaQuery(theme.breakpoints.up("sm"));
@@ -45,9 +46,7 @@ function MediumScreenContent() {
 function SmallScreenContent() {
   return (
     <div className="SmallScreenContent">
-      <h2>Welcome to the Small Screen</h2>
-      <p>This is content specifically for small screens.</p>
-      <button>Click Me</button>
+      <HeroBanner />
     </div>
   );
 }
