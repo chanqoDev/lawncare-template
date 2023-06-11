@@ -8,6 +8,7 @@ import {
   Menu,
   MenuItem,
   Typography,
+  Button,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
@@ -34,7 +35,7 @@ export default function Navbar() {
 
   const ContactBanner = styled(Typography)`
     padding: 8px;
-    background-color: #1e272e;
+    background-color: #cb4d14;
     font-size: 14px;
     display: flex;
     align-items: center;
@@ -69,12 +70,17 @@ export default function Navbar() {
           justifyContent: isMobile ? "center" : "space-between",
         }}
       >
-        <div style={{ alignSelf: isMobile ? "center" : "flex-start" }}>
+        <div
+          style={{
+            alignSelf: isMobile ? "center" : "flex-start",
+            display: "flex",
+          }}
+        >
           <img src={logo} alt="Logo" className="logo" />
         </div>
 
         {isMobile ? (
-          <div style={{ width: "100%" }}>
+          <div>
             <IconButton
               size="large"
               edge="end"
@@ -109,11 +115,13 @@ export default function Navbar() {
             </Menu>
           </div>
         ) : (
-          <div style={{ display: "flex" }} className="MenutItems">
-            <MenuItem style={{ fontSize: "x-large" }}>Home</MenuItem>
-            <MenuItem style={{ fontSize: "x-large" }}>About</MenuItem>
-            <MenuItem style={{ fontSize: "x-large" }}>Services</MenuItem>
-            <MenuItem style={{ fontSize: "x-large" }}>Contact</MenuItem>
+          <div className="MenutItems">
+            <MenuItem>Home</MenuItem>
+            <MenuItem>About</MenuItem>
+            <MenuItem>Services</MenuItem>
+            <Button variant="contained" style={{ backgroundColor: "#164801" }}>
+              Contact
+            </Button>
           </div>
         )}
       </Toolbar>

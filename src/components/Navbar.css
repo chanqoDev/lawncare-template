@@ -8,7 +8,7 @@
   height: 60px;
   display: flex;
   align-items: center;
-  background-color:  #135d8b;
+  background-color:  #164801;
   font-weight: 600;
   color: white;
   transition: background-color 0.9s, color 0.3s;
@@ -27,4 +27,16 @@
 .mobile-menu-paper ul {
   padding: 0; 
 }
- 
+
+.MenutItems {
+  display: flex;
+  flex-wrap: wrap-reverse; /* Allow menu items to wrap to the next line */
+  justify-content: flex-end; /* Adjust alignment as needed */
+  align-items: flex-start; /* Adjust alignment as needed */
+  max-width: 100%; 
+}
+
+.logo {
+  display: flex;
+  max-width: 90%;;
+}

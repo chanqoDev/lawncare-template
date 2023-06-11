@@ -5,6 +5,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import HeroBanner from "./components/HeroBanner";
 import "./components/smallScreenContent.css";
+import "./components/mediumScreenContent.css";
 export default function App() {
   const theme = useTheme();
   const matchesSm = useMediaQuery(theme.breakpoints.up("sm"));
@@ -37,8 +38,7 @@ function LargeScreenContent() {
 function MediumScreenContent() {
   return (
     <div className="MediumScreenContent">
-      <h1>Welcome to the Medium Screen</h1>
-      <p>This is content specifically for medium screens.</p>
+      <HeroBanner />
     </div>
   );
 }
