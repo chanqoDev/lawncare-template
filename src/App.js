@@ -33,6 +33,7 @@ function LargeScreenContent() {
   return (
     <div className="largeScreenContent">
       <HeroBanner />
+      <MainComponent />
     </div>
   );
 }

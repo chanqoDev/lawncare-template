@@ -71,3 +71,39 @@
   font-size: 20px;
   margin-bottom: 24px;
 }
+/* Main Component center text block */
+
+.largeScreenContent .center__text__block {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 80rem;
+  background-color: #ffffff;
+  padding: 30px; 
+}
+
+.largeScreenContent .center__text__block p {
+  margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #202020;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; 
+}
+
+.largeScreenContent .full__width {
+    background-color: #ffffff;
+}
+
+.lawnIcon {
+  width: 200px;
+  padding-top: 30px;
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}

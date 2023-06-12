@@ -9,18 +9,21 @@ function MainComponent() {
           <img src={lawguyIcon} alt="best in KC" className="lawnIcon" />
         </div>
         <p>
-          Innovating Landscaping in Kansas City: Unmatched Service and
-          Expertise. Experience landscaping like never before with Kansas City
+          <b>
+            Innovating landscaping in Kansas City with unmatched service and
+            expertise.
+          </b>{" "}
+          <br /> Experience landscaping like never before with Kansas City
           Landscape. We pride ourselves on punctuality, transparency, and
           extensive knowledge. Collaborating with you, we bring your outdoor
           vision to reality. As a local, family-owned business, we prioritize
           hands-on involvement and dedicated service. Our mission: exceptional
-          results at a fair price, tailored to our community!
+          results at a fair price, tailored to our community! Experience the
+          extraordinary transformation of landscapes with us. Our mission is to
+          deliver exceptional results at a fair price.{" "}
         </p>
         <p>
-          Experience the extraordinary transformation of landscapes with us. Our
-          mission is to deliver exceptional results at a fair price. Remarkable
-          experience that will surpass your expectations.
+          <em> Remarkable experience that will surpass your expectations. </em>
         </p>
       </div>
       <div className="featured__projects__block"></div>
