@@ -35,7 +35,7 @@ export default function Navbar() {
 
   const ContactBanner = styled(Typography)`
     padding: 8px;
-    background-color: #cb4d14;
+    background-color: #164801;
     font-size: 14px;
     display: flex;
     align-items: center;

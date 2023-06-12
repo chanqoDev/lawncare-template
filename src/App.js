@@ -7,6 +7,7 @@ import HeroBanner from "./components/HeroBanner";
 import "./components/smallScreenContent.css";
 import "./components/mediumScreenContent.css";
 import "./components/largeScreenContent.css";
+import MainComponent from "./components/MainComponent";
 
 export default function App() {
   const theme = useTheme();
@@ -48,6 +49,7 @@ function SmallScreenContent() {
   return (
     <div className="SmallScreenContent">
       <HeroBanner />
+      <MainComponent />
     </div>
   );
 }
