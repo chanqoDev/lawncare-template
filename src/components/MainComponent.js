@@ -26,9 +26,6 @@ function MainComponent() {
           <em> Remarkable experience that will surpass your expectations. </em>
         </p>
       </div>
-      <div className="featured__projects__block"></div>
-      <div className="who_we_are__block"></div>
-      <div className="testimonials"></div>
     </section>
   );
 }
