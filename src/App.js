@@ -9,6 +9,7 @@ import "./components/mediumScreenContent.css";
 import "./components/largeScreenContent.css";
 import MainComponent from "./components/MainComponent";
 import GridComponent from "./components/Grid";
+import Footer from "./components/Footer";
 
 export default function App() {
   const theme = useTheme();
@@ -56,6 +57,7 @@ function SmallScreenContent() {
       <HeroBanner />
       <MainComponent />
       <GridComponent />
+      <Footer />
     </div>
   );
 }

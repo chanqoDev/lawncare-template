@@ -142,3 +142,20 @@
 .grid__title {
   padding: 30px; 
 }
+
+
+/* /* Footer Items Styling  */
+ 
+.SmallScreenContent .footerLogo {
+  display: flex;
+  align-items: flex-start;  
+  margin-bottom: 10px;
+}
+
+.SmallScreenContent .footerLogo img {
+  vertical-align: baseline;
+}
+
+.SmallScreenContent .footerLogo .logoText {
+  margin-top: 40px; /* Adjust the margin value to match the desired alignment */
+}
