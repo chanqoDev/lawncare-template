@@ -47,6 +47,7 @@ function MediumScreenContent() {
       <HeroBanner />
       <MainComponent />
       <GridComponent />
+      <Footer />
     </div>
   );
 }

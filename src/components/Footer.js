@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Container, Grid, Typography } from "@mui/material";
 import logo from "../img/logo-trans.svg";
+import { Link } from "@mui/material";
 
 const Footer = () => {
   return (
@@ -18,7 +19,11 @@ const Footer = () => {
                 justifyContent="center"
               >
                 <img src={logo} alt="Logo" width={150} height="auto" />
-                <Typography className="logoText" variant="subtitle1" ml={2}>
+                <Typography
+                  className="logoText"
+                  variant="subtitle2"
+                  sm={{ ml: 2 }}
+                >
                   Lawncare & landscaping LLC
                 </Typography>
               </Box>
@@ -53,9 +58,15 @@ const Footer = () => {
                 <br />
                 Missouri, Kansas
                 <br />
-                Phone: (949) 375-9322
+                Phone:{" "}
+                <Link href="tel:+19493759322" color="inherit">
+                  (949) 375-9322
+                </Link>
                 <br />
-                Email: Lawncare@company.com
+                Email:{" "}
+                <Link href="mailto:Lawncare@company.com" color="inherit">
+                  Lawncare@company.com
+                </Link>
               </Typography>
             </Grid>
           </Grid>
