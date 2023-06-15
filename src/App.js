@@ -37,6 +37,7 @@ function LargeScreenContent() {
       <HeroBanner />
       <MainComponent />
       <GridComponent />
+      <Footer />
     </div>
   );
 }

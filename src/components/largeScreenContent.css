@@ -150,3 +150,22 @@
 .LargeScreenContent .grid__title {
   padding: 40px;
 }
+
+/* /* Footer Style  */
+.largeScreenContent .footerLogo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.largeScreenContent .footerLogo img {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.largeScreenContent .footerLogo .logoText {
+  font-size: 18px; 
+  margin-top: 40px;
+}
+

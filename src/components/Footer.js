@@ -24,7 +24,7 @@ const Footer = () => {
                   variant="subtitle2"
                   sm={{ ml: 2 }}
                 >
-                  Lawncare & landscaping LLC
+                  Lawncare & landscaping
                 </Typography>
               </Box>
               <Typography variant="body2" sx={{ fontStyle: "italic" }}>
