@@ -50,22 +50,26 @@ const GridComponent = () => {
   ];
 
   return (
-    <>
+    <div
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "center",
+        maxWidth: "1200px",
+        margin: "0 auto",
+        padding: "0 4px 0 4px",
+      }}
+    >
       <Typography variant="h3" component="div" className="grid__title">
         Our Services
       </Typography>
 
-      <Grid
-        container
-        spacing={1}
-        textAlign="center"
-        style={{ padding: "0 20px 0 20px" }}
-      >
+      <Grid container spacing={1} textAlign="center">
         {items.map((item, index) => (
           <GridItem key={index} item={item} />
         ))}
       </Grid>
-    </>
+    </div>
   );
 };
 

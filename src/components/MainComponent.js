@@ -4,7 +4,7 @@ import lawguyIcon from "../img/house-lawn-icon.svg";
 function MainComponent() {
   return (
     <section className="full__width">
-      <div className="center__text__block">
+      <div className="center__text__block" style={{ maxWidth: "1200px" }}>
         <div className="iconContainer">
           <img src={lawguyIcon} alt="best in KC" className="lawnIcon" />
         </div>
