@@ -10,6 +10,7 @@ import "./components/largeScreenContent.css";
 import MainComponent from "./components/MainComponent";
 import GridComponent from "./components/Grid";
 import Footer from "./components/Footer";
+import AboutUs from "./components/AboutUs";
 
 export default function App() {
   const theme = useTheme();
@@ -36,6 +37,7 @@ function LargeScreenContent() {
     <div className="largeScreenContent">
       <HeroBanner />
       <MainComponent />
+      <AboutUs />
       <GridComponent />
       <Footer />
     </div>
@@ -47,6 +49,7 @@ function MediumScreenContent() {
     <div className="MediumScreenContent">
       <HeroBanner />
       <MainComponent />
+      <AboutUs />
       <GridComponent />
       <Footer />
     </div>
@@ -58,6 +61,7 @@ function SmallScreenContent() {
     <div className="SmallScreenContent">
       <HeroBanner />
       <MainComponent />
+      <AboutUs />
       <GridComponent />
       <Footer />
     </div>
