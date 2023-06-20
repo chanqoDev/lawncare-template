@@ -7,45 +7,45 @@ import img3 from "../img/Bush_Shrub.png";
 import img4 from "../img/Grass_roll.png";
 import img5 from "../img/landscape_design.png";
 import img6 from "../img/Leafblower_guy.png";
+import { Box } from "@mui/system";
 
 const GridComponent = () => {
   const items = [
     {
       image: img1,
-      title: "Lawn Mowing Services and maintenance",
+      title: "Lawn Mowing Services",
       content:
-        "Our team of skilled and knowledgeable professionals is equipped with state-of-the-art tools and equipment to ensure precise and efficient lawn mowing services. We carefully cut the grass to the optimal height, promoting healthy growth and a clean, uniform appearance.",
+        "Skilled professionals with state-of-the-art tools and equipment for precise and efficient lawn mowing services. Promoting healthy growth and a clean, uniform appearance.",
     },
     {
       image: img4,
-      title: "Aeration, Seeding & Sod installation",
+      title: "Aeration, Seeding & Sod",
       content:
-        "Combat soil compaction and promote optimal growth, we offer aeration services that facilitate the flow of air, water, and nutrients to the grassroots. We also provide overseeding, which helps fill in bare spots and thin areas, resulting in a denser and more resilient lawn.",
+        "Combat soil compaction and promote optimal growth. Aeration services facilitate air, water, and nutrient flow. Overseeding fills in bare spots for a denser and more resilient lawn.",
     },
     {
       image: img5,
-      title: "Custom Landscape design",
+      title: "Custom Landscape Design",
       content:
-        "Our talented landscape designers work closely with you to understand your vision and preferences. We create customized design plans that incorporate elements such as walkways, flower beds, water features, lighting, and more, transforming your outdoor space into a beautiful and functional landscape.",
+        "Talented landscape designers working closely with you to create customized plans. Incorporating walkways, flower beds, water features, lighting, and more for a beautiful and functional landscape.",
     },
-
     {
       image: img3,
       title: "Edging and Trimming",
       content:
-        "Give your lawn a polished and manicured look, we pay close attention to detail by edging the borders and trimming around trees, flower beds, and other landscape features. This meticulous approach adds definition to your lawn and enhances its overall aesthetic appeal.",
+        "Paying close attention to detail by edging borders and trimming around trees, flower beds, and landscape features. Adding definition and enhancing the aesthetic appeal of your lawn.",
     },
     {
       image: img2,
       title: "Tree & Shrub Care",
       content:
-        "Our certified arborists employ industry-leading techniques to carefully prune and trim your trees and shrubs. By removing dead or diseased branches and shaping them properly, we enhance their overall health, appearance, and longevity.",
+        "Certified arborists using industry-leading techniques to prune and trim trees and shrubs. Enhancing their health, appearance, and longevity by removing dead or diseased branches and shaping them properly.",
     },
     {
       image: img6,
-      title: "Seasonal clean-up leaf removal and Snow removal",
+      title: "Seasonal Cleanup",
       content:
-        "As the seasons change, so do the needs of your lawn. Our comprehensive seasonal cleanup services include leaf removal, debris clearing, and winterizing your lawn. We prepare your lawn for the upcoming season, ensuring a smooth transition and minimizing any potential damage.",
+        "Comprehensive services including leaf removal, debris clearing, and winterizing your lawn. Preparing your lawn for the upcoming season and minimizing potential damage.",
     },
   ];
 
@@ -57,14 +57,19 @@ const GridComponent = () => {
         justifyContent: "center",
         maxWidth: "1200px",
         margin: "0 auto",
-        padding: "0 4px 0 4px",
+        padding: "0 4px",
       }}
     >
-      <Typography variant="h3" component="div" className="grid__title">
-        Our Services
-      </Typography>
+      <Box sx={{ textAlign: "center", mt: 4 }}>
+        <Typography
+          variant="h4"
+          sx={{ fontSize: "36px", mb: 2, color: "#333" }}
+        >
+          OUR SERVICES
+        </Typography>
+      </Box>
 
-      <Grid container spacing={1} textAlign="center">
+      <Grid container spacing={1} justifyContent="center">
         {items.map((item, index) => (
           <GridItem key={index} item={item} />
         ))}
