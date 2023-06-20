@@ -9,7 +9,7 @@ const ColumnsContainer = styled.div`
   gap: 20px;
   margin: 0 auto;
   width: 100%;
-  background-color: #164801;
+  background-color: #92998d;
   height: 300px;
 
   @media (max-width: 768px) {

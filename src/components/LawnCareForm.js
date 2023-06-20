@@ -63,7 +63,7 @@ const LawnCareForm = () => {
             variant="h4"
             sx={{ fontWeight: "bold", marginBottom: "1rem" }}
           >
-            Contact Us
+            CONTACT US
           </Typography>
           <StyledTextField
             label="Name"
@@ -114,9 +114,7 @@ const LawnCareForm = () => {
               style={{ margin: "5px 0" }}
             >
               <MenuItem value="">Select Service</MenuItem>
-              <MenuItem value="Lawn Mowed & Maintenance">
-                Lawn Mowed & Maintenance
-              </MenuItem>
+              <MenuItem value="Lawn Mowed & Maintenance">Lawn Mowed</MenuItem>
               <MenuItem value="Custom Landscape Design">
                 Custom Landscape Design
               </MenuItem>
@@ -128,6 +126,9 @@ const LawnCareForm = () => {
               </MenuItem>
               <MenuItem value="Aeration, Seeding & Sod installation">
                 Aeration, Seeding & Sod installation
+              </MenuItem>
+              <MenuItem value="Lawn Mowed Maintenance Program">
+                Lawn Mowed Maintenance Program
               </MenuItem>
             </Select>
           </FormControl>

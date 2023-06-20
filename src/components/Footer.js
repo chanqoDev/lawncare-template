@@ -25,30 +25,61 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const StyledFooterBox = styled(Box)`
+  /* Custom styles for the footer box */
+`;
+
 const Footer = () => {
   const classes = useStyles(); // Define the 'classes' variable here
 
   return (
     <footer>
-      <Grid xs={12} sm={4} py={4}>
+      <Box sx={{ textAlign: "center", mt: 4 }}>
+        <Typography
+          variant="h4"
+          sx={{ fontSize: "36px", mb: 2, color: "#333" }}
+        >
+          CONTACT
+        </Typography>
+      </Box>
+      <Grid
+        container
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+        py={2}
+      >
         <Map />
       </Grid>
-      <Box bgcolor="#f5f5f5" py={4}>
+      <Box bgcolor="#f5f5f5">
         <Container maxWidth="lg">
-          <Grid container spacing={2}>
-            <Grid item xs={12} sm={4}>
+          <Grid
+            container
+            spacing={2}
+            direction="row"
+            justifyContent="space-around"
+            alignItems="center"
+          >
+            <Grid item xs={12} sm={6}>
               <LawnCareForm />
             </Grid>
-            <Grid item xs={12} sm={4}>
-              <Typography variant="h6">Get in Touch</Typography>
-              <Typography variant="body2">
+            <Grid item xs={12} sm={6}>
+              <Typography
+                variant="h4"
+                sx={{ fontSize: "36px", mb: 2, color: "#333" }}
+              >
+                Get In Touch
+              </Typography>
+              <Typography variant="body1" py={2}>
+                Servicing Cities in:
+                <br />
                 Kansas City, Independence
                 <br />
                 Missouri, Kansas
                 <br />
                 Phone:{" "}
-                <Link href="tel:+19493759322" color="inherit">
-                  (949) 375-9322
+                <Link href="tel:+19493759321" color="inherit">
+                  (949) 375-9321
                 </Link>
                 <br />
                 Email:{" "}
@@ -112,11 +143,11 @@ const Footer = () => {
         </Container>
       </Box>
 
-      <StyledFooterBox bgcolor="#e0e0e0" py={2} textAlign="center">
+      <StyledFooterBox py={2} textAlign="center">
         <img src={logo} alt="Logo" width={150} height="auto" />
         <Typography className="logoText" variant="subtitle2" sm={{ ml: 2 }}>
-          "Innovating landscaping in Kansas City with unmatched service and
-          expertise."
+          Innovating landscaping in Kansas City with unmatched service and
+          expertise.
         </Typography>
         <Typography variant="caption">
           &copy; {new Date().getFullYear()} LawnCare LLC. All rights reserved.
@@ -125,9 +156,5 @@ const Footer = () => {
     </footer>
   );
 };
-
-const StyledFooterBox = styled(Box)`
-  /* Custom styles for the footer box */
-`;
 
 export default Footer;

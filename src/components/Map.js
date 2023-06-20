@@ -1,13 +1,14 @@
 import React from "react";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
-import API_KEY from "./services/config";
+// import API_KEY from "./services/config";
 
 const Map = () => {
   const containerStyle = {
-    width: "100%",
-    height: "400px",
+    width: "65%",
+    height: "600px",
     justifySelf: "center",
     alignSelf: "center",
+    maxWidth: "1200px",
   };
 
   const center = {
@@ -234,7 +235,7 @@ const Map = () => {
   };
 
   return (
-    <LoadScript googleMapsApiKey={API_KEY}>
+    <LoadScript googleMapsApiKey="{API_KEY}">
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={center}
