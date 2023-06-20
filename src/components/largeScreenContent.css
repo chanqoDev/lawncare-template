@@ -162,7 +162,7 @@ font-size: 18px;
 
 .largeScreenContent .footerLogo .logoText {
   font-size: 18px; 
-  margin-top: 40px;
+  /* margin-top: 40px; */
 }
 
 .largeScreenContent .css-mhc70k-MuiGrid-root > .MuiGrid-item {

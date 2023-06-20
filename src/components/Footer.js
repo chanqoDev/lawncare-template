@@ -10,6 +10,8 @@ import InstagramIcon from "@material-ui/icons/Instagram";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import YouTubeIcon from "@material-ui/icons/YouTube";
+import LawnCareForm from "./LawnCareForm";
+import Map from "./Map";
 
 const useStyles = makeStyles((theme) => ({
   social: {
@@ -28,52 +30,15 @@ const Footer = () => {
 
   return (
     <footer>
+      <Grid xs={12} sm={4} py={4}>
+        <Map />
+      </Grid>
       <Box bgcolor="#f5f5f5" py={4}>
         <Container maxWidth="lg">
-          <Grid container spacing={3}>
-            {/* First Section */}
+          <Grid container spacing={2}>
             <Grid item xs={12} sm={4}>
-              <Box
-                className="footerLogo"
-                display="flex"
-                alignItems="flex-start"
-                mb={2}
-                justifyContent="center"
-              >
-                <img src={logo} alt="Logo" width={150} height="auto" />
-                <Typography
-                  className="logoText"
-                  variant="subtitle2"
-                  sm={{ ml: 2 }}
-                >
-                  Lawncare & landscaping
-                </Typography>
-              </Box>
-
-              <Typography variant="body2" sx={{ fontStyle: "italic" }}>
-                "Innovating landscaping in Kansas City with unmatched service
-                and expertise."
-              </Typography>
+              <LawnCareForm />
             </Grid>
-
-            {/* Second Section */}
-            <Grid item xs={12} sm={4}>
-              <Typography variant="h6">Lawn Services</Typography>
-              <Typography
-                variant="body2"
-                component="ul"
-                sx={{ listStyleType: "none", p: 0 }}
-              >
-                <li>Lawn Mowing Services and maintenance</li>
-                <li>Edging and Trimming</li>
-                <li>Custom Landscape Design</li>
-                <li>Seasonal clean-up leaf removal and Snow removal</li>
-                <li>Tree & Shrub Care</li>
-                <li>Aeration, Seeding & Sod installation</li>
-              </Typography>
-            </Grid>
-
-            {/* Third Section */}
             <Grid item xs={12} sm={4}>
               <Typography variant="h6">Get in Touch</Typography>
               <Typography variant="body2">
@@ -148,6 +113,11 @@ const Footer = () => {
       </Box>
 
       <StyledFooterBox bgcolor="#e0e0e0" py={2} textAlign="center">
+        <img src={logo} alt="Logo" width={150} height="auto" />
+        <Typography className="logoText" variant="subtitle2" sm={{ ml: 2 }}>
+          "Innovating landscaping in Kansas City with unmatched service and
+          expertise."
+        </Typography>
         <Typography variant="caption">
           &copy; {new Date().getFullYear()} LawnCare LLC. All rights reserved.
         </Typography>
