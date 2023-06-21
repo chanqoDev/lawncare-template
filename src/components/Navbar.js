@@ -34,7 +34,7 @@ export default function Navbar() {
   };
 
   return (
-    <AppBar position="static" color="transparent">
+    <AppBar position="static" color="transparent" id="home">
       <Toolbar
         style={{
           display: "flex",
@@ -90,17 +90,29 @@ export default function Navbar() {
         ) : (
           <div className="MenutItems">
             <MenuItem>
-              <Typography variant="subtitle1">Home</Typography>
+              <Typography variant="subtitle1">
+                <a href="#home">Home</a>
+              </Typography>
             </MenuItem>
             <MenuItem>
-              <Typography variant="subtitle1">About</Typography>
+              <Typography variant="subtitle1">
+                {" "}
+                <a href="#about">About</a>
+              </Typography>
             </MenuItem>
             <MenuItem>
-              <Typography variant="subtitle1">Services</Typography>
+              <Typography variant="subtitle1">
+                <a href="#services">Services</a>
+              </Typography>
             </MenuItem>
-            <Button variant="contained" style={{ backgroundColor: "#164801" }}>
-              Contact
-            </Button>
+            <MenuItem>
+              <Button
+                variant="contained"
+                style={{ backgroundColor: "#164801" }}
+              >
+                <a href="#contact">Contact</a>
+              </Button>
+            </MenuItem>
           </div>
         )}
       </Toolbar>

@@ -7,7 +7,7 @@ import { Box } from "@mui/system";
 
 const AboutUsContainer = styled(Container)`
   background-color: #f5f5f5;
-  padding: 50px 0; /* Add vertical padding */
+  padding: 50px 0;
 `;
 
 const ContentContainer = styled(Grid)`
@@ -16,20 +16,21 @@ const ContentContainer = styled(Grid)`
 
 const Image = styled.img`
   width: 100%;
-  height: auto; /* Keep the height proportional */
+  height: auto;
   border-radius: 4px;
   object-fit: cover;
-  max-width: 1000px; /* Increase the maximum width */
-  max-height: 900px; /* Increase the maximum height */
+  max-width: 1000px;
+  max-height: 900px;
 `;
 const AboutUs = () => {
   return (
     <>
-      <Box sx={{ textAlign: "center", mt: 6, mb: 6 }}>
-        {" "}
-        {/* Add mb (margin-bottom) */}
-        <Typography variant="h4" sx={{ fontSize: "36px", color: "#333" }}>
-          Who We are
+      <Box id="about" sx={{ textAlign: "center", mt: 6, mb: 6 }}>
+        <Typography
+          variant="h4"
+          sx={{ fontSize: "36px", fontWeight: "600", color: "#164801" }}
+        >
+          About Us
         </Typography>
       </Box>
       <AboutUsContainer>

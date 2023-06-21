@@ -32,16 +32,17 @@ const HeroBanner = () => {
           color: "white",
           fontWeight: "bold",
           zIndex: 1,
+          fontSize: "36px",
         }}
       >
         Your Trusted Partner for Lawncare Excellence
       </Typography>
       <Typography
         variant="body1"
+        className="hero-sub-title"
         sx={{ mb: 2 }}
         style={{
           color: "white",
-          fontSize: "28px",
           fontWeight: "bold",
           zIndex: 1,
         }}

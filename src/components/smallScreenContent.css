@@ -10,11 +10,11 @@
 }
 
 .SmallScreenContent h1 {
-  font-size: 26px;
+  font-size: 36px;
 }
 
 .SmallScreenContent h2 {
-  font-size: 24px;
+  font-size: 32px;
 }
 
 .SmallScreenContent p {
@@ -46,7 +46,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 80vh;
 }
 
 .SmallScreenContent .hero-banner::before {
@@ -71,12 +71,12 @@
 }
 
 .SmallScreenContent .hero-title {
-  font-size: 36px;
+  font-size: 22px;
   margin-bottom: 16px;
 }
 
 .SmallScreenContent .hero-description {
-  font-size: 20px;
+  font-size: 24px;
   margin-bottom: 24px;
 }
 
@@ -159,3 +159,6 @@
 .SmallScreenContent .footerLogo .logoText {
   margin-top: 40px; /* Adjust the margin value to match the desired alignment */
 }
+ 
+
+ 

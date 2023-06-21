@@ -23,6 +23,7 @@
     "react-google-forms-hooks": "^1.2.4",
     "react-google-maps": "^9.4.5",
     "react-icons": "^4.9.0",
+    "react-router-dom": "^6.13.0",
     "react-scripts": "5.0.1",
     "react-spring": "^9.7.1",
     "styled-components": "^6.0.0-rc.3",

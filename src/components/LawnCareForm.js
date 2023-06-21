@@ -25,7 +25,7 @@ const StyledForm = styled.form`
   justify-content: center;
 
   @media (max-width: 768px) {
-    width: 90%;
+    width: 100%;
   }
 `;
 
@@ -43,9 +43,12 @@ const LawnCareForm = () => {
   });
 
   const handleChange = (e) => {
+    const { name, value } = e.target;
+    const numericInput = value.replace(/\D/g, ""); // Remove non-numeric characters
+
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [name]: numericInput,
     });
   };
 
@@ -61,7 +64,7 @@ const LawnCareForm = () => {
         <StyledForm onSubmit={handleSubmit}>
           <Typography
             variant="h4"
-            sx={{ fontWeight: "bold", marginBottom: "1rem" }}
+            sx={{ fontWeight: "600", color: "#164801", marginBottom: "1rem" }}
           >
             CONTACT US
           </Typography>
@@ -94,7 +97,10 @@ const LawnCareForm = () => {
             value={formData.phoneNumber}
             onChange={handleChange}
             variant="outlined"
+            inputMode="numeric"
             style={{ marginTop: "5px" }}
+            placeholder="(XXX) XXX-XXXX"
+            format="###-###-####"
           />
           <FormControl
             fullWidth

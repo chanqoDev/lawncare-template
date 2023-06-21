@@ -33,14 +33,14 @@ const StyledFooterBox = styled(Box)`
 `;
 
 const Footer = () => {
-  const classes = useStyles(); // Define the 'classes' variable here
+  const classes = useStyles();
 
   return (
-    <footer>
+    <footer id="contact">
       <Box sx={{ textAlign: "center", mt: 6 }}>
         <Typography
           variant="h4"
-          sx={{ fontSize: "36px", mb: 2, color: "#333" }}
+          sx={{ fontSize: "36px", mb: 2, fontWeight: "600", color: "#164801" }}
         >
           CONTACT
         </Typography>
@@ -74,8 +74,8 @@ const Footer = () => {
                 sx={{
                   fontSize: "36px",
                   mb: 0,
-                  color: "#333",
-                  fontWeight: "bold",
+                  fontWeight: "600",
+                  color: "#164801",
                 }}
               >
                 Get In Touch
@@ -86,14 +86,20 @@ const Footer = () => {
                   "Kansas City, Independence",
                   "Missouri, Kansas",
                   "Phone: ",
-                  <Link key="phone" href="tel:+19493759321" color="inherit">
-                    (949) 375-9321
-                  </Link>,
+                  <Typography
+                    variant="h6"
+                    component="div"
+                    style={{ fontWeight: "600", color: "#164801" }}
+                  >
+                    <Link key="phone" href="tel:+19493759321" color="inherit">
+                      (949) 375-9321
+                    </Link>
+                  </Typography>,
                   "Email: ",
                   <Link
                     key="email"
                     href="mailto:Lawncare@company.com"
-                    color="inherit"
+                    style={{ fontWeight: "600", color: "#164801" }}
                   >
                     Lawncare@company.com
                   </Link>,

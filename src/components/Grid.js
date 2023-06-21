@@ -55,15 +55,17 @@ const GridComponent = () => {
         display: "flex",
         flexWrap: "wrap",
         justifyContent: "center",
+        alignContent: "center",
         maxWidth: "1200px",
         margin: "0 auto",
         padding: "0 4px",
       }}
+      id="services"
     >
       <Box sx={{ textAlign: "center", mt: 5 }}>
         <Typography
           variant="h4"
-          sx={{ fontSize: "36px", mb: 4, color: "#333" }}
+          sx={{ fontSize: "36px", mb: 4, fontWeight: "600", color: "#164801" }}
         >
           OUR SERVICES
         </Typography>
