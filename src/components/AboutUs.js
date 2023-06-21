@@ -7,8 +7,7 @@ import { Box } from "@mui/system";
 
 const AboutUsContainer = styled(Container)`
   background-color: #f5f5f5;
-  padding: 0;
-  margin: 50px 0 0 0;
+  padding: 50px 0; /* Add vertical padding */
 `;
 
 const ContentContainer = styled(Grid)`
@@ -17,21 +16,20 @@ const ContentContainer = styled(Grid)`
 
 const Image = styled.img`
   width: 100%;
-  max-width: 600px;
-  height: 100%;
+  height: auto; /* Keep the height proportional */
   border-radius: 4px;
-  margin-bottom: 20px;
   object-fit: cover;
+  max-width: 1000px; /* Increase the maximum width */
+  max-height: 900px; /* Increase the maximum height */
 `;
 const AboutUs = () => {
   return (
     <>
-      <Box sx={{ textAlign: "center", mt: 4 }}>
-        <Typography
-          variant="h4"
-          sx={{ fontSize: "36px", mb: 2, color: "#333" }}
-        >
-          ABOUT US
+      <Box sx={{ textAlign: "center", mt: 6, mb: 6 }}>
+        {" "}
+        {/* Add mb (margin-bottom) */}
+        <Typography variant="h4" sx={{ fontSize: "36px", color: "#333" }}>
+          Who We are
         </Typography>
       </Box>
       <AboutUsContainer>
@@ -51,7 +49,7 @@ const AboutUs = () => {
               Top Rated Kansas City Area Landscape Company
             </Typography>
             <Typography variant="body1" paragraph>
-              Our highly skilled team of professionals are dedicated and
+              Our highly skilled team of professionals is dedicated and
               passionate about creating stunning landscapes that exceed our
               clients' expectations. We offer a wide range of services,
               including landscape design, installation, maintenance, and

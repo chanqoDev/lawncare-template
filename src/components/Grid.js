@@ -60,10 +60,10 @@ const GridComponent = () => {
         padding: "0 4px",
       }}
     >
-      <Box sx={{ textAlign: "center", mt: 4 }}>
+      <Box sx={{ textAlign: "center", mt: 5 }}>
         <Typography
           variant="h4"
-          sx={{ fontSize: "36px", mb: 2, color: "#333" }}
+          sx={{ fontSize: "36px", mb: 4, color: "#333" }}
         >
           OUR SERVICES
         </Typography>

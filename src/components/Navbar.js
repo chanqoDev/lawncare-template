@@ -14,8 +14,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import logo from "../img/logo-trans.svg";
 import "./Navbar.css";
-import { styled } from "@mui/system";
-import PhoneIcon from "@mui/icons-material/Phone";
+// import { styled } from "@mui/system";
+// import PhoneIcon from "@mui/icons-material/Phone";
 
 export default function Navbar() {
   const theme = useTheme();
@@ -33,35 +33,8 @@ export default function Navbar() {
     setIsMenuOpen(false); // Update menu state
   };
 
-  const ContactBanner = styled(Typography)`
-    padding: 8px;
-    background-color: #164801;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 600;
-    color: white;
-  `;
-
-  const PhoneNumber = styled("span")`
-    margin: 0 5px;
-    font-weight: 600;
-  `;
-  const PhoneNumberLink = styled("a")`
-    text-decoration: none;
-    color: white;
-  `;
-
   return (
     <AppBar position="static" color="transparent">
-      <ContactBanner>
-        CALL US TODAY!
-        <PhoneIcon />
-        <PhoneNumber>
-          <PhoneNumberLink href="tel:9493759322">(949)375-9322</PhoneNumberLink>
-        </PhoneNumber>
-      </ContactBanner>
       <Toolbar
         style={{
           display: "flex",
@@ -116,9 +89,15 @@ export default function Navbar() {
           </div>
         ) : (
           <div className="MenutItems">
-            <MenuItem>Home</MenuItem>
-            <MenuItem>About</MenuItem>
-            <MenuItem>Services</MenuItem>
+            <MenuItem>
+              <Typography variant="subtitle1">Home</Typography>
+            </MenuItem>
+            <MenuItem>
+              <Typography variant="subtitle1">About</Typography>
+            </MenuItem>
+            <MenuItem>
+              <Typography variant="subtitle1">Services</Typography>
+            </MenuItem>
             <Button variant="contained" style={{ backgroundColor: "#164801" }}>
               Contact
             </Button>

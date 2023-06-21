@@ -4,12 +4,15 @@ import logo from "../img/logo-trans.svg";
 import { Link } from "@mui/material";
 import { makeStyles } from "@material-ui/core/styles";
 
+import yelp_logo from "../img/yelp_logo.svg";
+import homeAdvisorImg from "../img/HomeAdvisor.png";
 import styled from "styled-components";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
-import TwitterIcon from "@material-ui/icons/Twitter";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import YouTubeIcon from "@material-ui/icons/YouTube";
+import { FaYelp } from "react-icons/fa";
+import { IoLogoGoogle } from "react-icons/io";
+
 import LawnCareForm from "./LawnCareForm";
 import Map from "./Map";
 
@@ -34,7 +37,7 @@ const Footer = () => {
 
   return (
     <footer>
-      <Box sx={{ textAlign: "center", mt: 4 }}>
+      <Box sx={{ textAlign: "center", mt: 6 }}>
         <Typography
           variant="h4"
           sx={{ fontSize: "36px", mb: 2, color: "#333" }}
@@ -42,6 +45,7 @@ const Footer = () => {
           CONTACT
         </Typography>
       </Box>
+
       <Grid
         container
         direction="row"
@@ -51,13 +55,14 @@ const Footer = () => {
       >
         <Map />
       </Grid>
+
       <Box bgcolor="#f5f5f5">
         <Container maxWidth="lg">
           <Grid
             container
             spacing={2}
             direction="row"
-            justifyContent="space-around"
+            justifyContent="center"
             alignItems="center"
           >
             <Grid item xs={12} sm={6}>
@@ -66,27 +71,40 @@ const Footer = () => {
             <Grid item xs={12} sm={6}>
               <Typography
                 variant="h4"
-                sx={{ fontSize: "36px", mb: 2, color: "#333" }}
+                sx={{
+                  fontSize: "36px",
+                  mb: 0,
+                  color: "#333",
+                  fontWeight: "bold",
+                }}
               >
                 Get In Touch
               </Typography>
               <Typography variant="body1" py={2}>
-                Servicing Cities in:
-                <br />
-                Kansas City, Independence
-                <br />
-                Missouri, Kansas
-                <br />
-                Phone:{" "}
-                <Link href="tel:+19493759321" color="inherit">
-                  (949) 375-9321
-                </Link>
-                <br />
-                Email:{" "}
-                <Link href="mailto:Lawncare@company.com" color="inherit">
-                  Lawncare@company.com
-                </Link>
+                {[
+                  "Servicing Cities in:",
+                  "Kansas City, Independence",
+                  "Missouri, Kansas",
+                  "Phone: ",
+                  <Link key="phone" href="tel:+19493759321" color="inherit">
+                    (949) 375-9321
+                  </Link>,
+                  "Email: ",
+                  <Link
+                    key="email"
+                    href="mailto:Lawncare@company.com"
+                    color="inherit"
+                  >
+                    Lawncare@company.com
+                  </Link>,
+                ].map((text, index) => (
+                  <React.Fragment key={index}>
+                    {text}
+                    <br />
+                  </React.Fragment>
+                ))}
               </Typography>
+
               <div
                 className={classes.social}
                 aria-label="social media"
@@ -114,30 +132,51 @@ const Footer = () => {
                   className={classes.socialLink}
                   rel="noopener"
                   target="_blank"
-                  href="https://twitter.com/"
-                >
-                  <TwitterIcon style={{ color: "rgb(22, 72, 1)" }} />
-                  <Typography variant="srOnly"></Typography>
-                </Link>
-                <Link
-                  className={classes.socialLink}
-                  rel="noopener"
-                  target="_blank"
-                  href="https://www.linkedin.com/"
-                >
-                  <LinkedInIcon style={{ color: "rgb(22, 72, 1)" }} />
-                  <Typography variant="srOnly"></Typography>
-                </Link>
-                <Link
-                  className={classes.socialLink}
-                  rel="noopener"
-                  target="_blank"
                   href="https://www.youtube.com/"
                 >
                   <YouTubeIcon style={{ color: "rgb(22, 72, 1)" }} />
                   <Typography variant="srOnly"></Typography>
                 </Link>
+                <Link
+                  className={classes.socialLink}
+                  rel="noopener"
+                  target="_blank"
+                  href="https://Google.com/"
+                >
+                  <IoLogoGoogle style={{ color: "rgb(22, 72, 1)" }} />
+                  <Typography variant="srOnly"></Typography>
+                </Link>
+
+                <Link
+                  className={classes.socialLink}
+                  rel="noopener"
+                  target="_blank"
+                  href="https://www.yelp.com/"
+                >
+                  <FaYelp style={{ color: "rgb(22, 72, 1)" }} />
+                  <Typography variant="srOnly"></Typography>
+                </Link>
               </div>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <img
+                  src={homeAdvisorImg}
+                  alt="HomeAdvisor 5-star Ratings"
+                  width={90}
+                  height="auto"
+                />
+                <img
+                  src={yelp_logo}
+                  alt="Yelp 5-star Ratings"
+                  width={80}
+                  height="auto"
+                />
+              </Box>
             </Grid>
           </Grid>
         </Container>

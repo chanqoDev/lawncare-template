@@ -5,7 +5,7 @@
 
 .largeScreenContent h1,
 .largeScreenContent h2 {
-  color: #333;
+  color: #666;
   font-size: 26px;
   margin-bottom: 10px;
 }
@@ -19,6 +19,7 @@
 .largeScreenContent button {
   background-color: #135d8b;
   color: #f5f5f5;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
   padding: 8px 16px;
   border: none;
   border-radius: 4px;
@@ -36,11 +37,23 @@
   background-size: cover;
   background-position: center;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 80vh;
+  
 }
 
+
+.largeScreenContent .hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: -1; /* Move the overlay behind the hero banner content */
+}
 .largeScreenContent .hero-banner::before {
   content: "";
   position: absolute;
@@ -48,28 +61,32 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.3);
+
 }
 
 .largeScreenContent .hero-content {
   position: relative;
   text-align: center;
-  z-index: 1; /* Ensure the content is above the overlay */
 }
 
 .largeScreenContent .hero-title,
 .largeScreenContent .hero-description {
-  color: #f5f5f5;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 .largeScreenContent .hero-title {
-  font-size: 36px;
-  margin-bottom: 18px;
+  font-size: 40px;
+  margin-bottom: 20px;
+  line-height: 1.2;
 }
 
 .largeScreenContent .hero-description {
-  font-size: 20px;
-  margin-bottom: 24px;
+  font-size: 24px;
+  margin-bottom: 30px;
+    line-height: 1.4;
+
 }
 /* Main Component center text block */
 
@@ -187,4 +204,26 @@ font-size: 18px;
     flex-shrink: 0;
     user-select: none;
 
+}
+.largeScreenContent .css-1hx6p0u-MuiGrid-root>.MuiGrid-item { 
+  padding: 0; 
+}
+
+.largeScreenContent .css-1fyyp8j-MuiGrid-root img {
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+  max-height: auto;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+ 
+
+@media (max-width: 600px) {
+  .css-1fyyp8j-MuiGrid-root img {
+    max-width: 100%; /* Set the maximum width to 100% for small screens */
+    max-height: auto; /* Reset the maximum height */
+  }
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useSpring, animated } from "react-spring";
 
 const ColumnsContainer = styled.div`
   display: flex;
@@ -7,10 +8,11 @@ const ColumnsContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 20px;
-  margin: 0 auto;
+  margin: 100px 0;
   width: 100%;
+  maxwidth: "1200px";
   background-color: #92998d;
-  height: 300px;
+  height: 200px;
 
   @media (max-width: 768px) {
     flex-wrap: wrap;
@@ -45,8 +47,8 @@ const Column = styled.div`
   }
 `;
 
-const NumberText = styled.span`
-  font-size: 60px;
+const NumberText = styled(animated.span)`
+  font-size: 52px;
   color: #f5f5f5;
 
   @media (max-width: 768px) {
@@ -54,7 +56,7 @@ const NumberText = styled.span`
   }
 `;
 
-const DescriptionText = styled.p`
+const DescriptionText = styled(animated.p)`
   && {
     font-size: 22px;
     color: #f5f5f5;
@@ -65,20 +67,33 @@ const DescriptionText = styled.p`
   }
 `;
 
-const IncrementingNumber = ({ initialValue, increment, interval }) => {
-  const [number, setNumber] = React.useState(initialValue);
+const IncrementingNumber = ({ initialValue, finalValue, interval }) => {
+  // eslint-disable-next-line
+  const [number, setNumber] = React.useState(0);
+  const numberProps = useSpring({
+    number: finalValue,
+    from: { number: 0 },
+    config: { duration: interval },
+    onRest: () => {
+      setNumber(finalValue);
+    },
+  });
 
   React.useEffect(() => {
-    const timer = setInterval(() => {
-      setNumber((prevNumber) => prevNumber + increment);
+    const timer = setTimeout(() => {
+      setNumber(finalValue);
     }, interval);
 
     return () => {
-      clearInterval(timer);
+      clearTimeout(timer);
     };
-  }, [increment, interval]);
+  }, [setNumber, finalValue, interval]);
 
-  return <NumberText>{number}</NumberText>;
+  return (
+    <NumberText>
+      {numberProps.number.interpolate((val) => Math.floor(val))}
+    </NumberText>
+  );
 };
 
 const ColumnStats = () => {
@@ -89,19 +104,15 @@ const ColumnStats = () => {
         <DescriptionText>Client satisfaction</DescriptionText>
       </Column>
       <Column>
-        <IncrementingNumber
-          initialValue={377}
-          increment={3}
-          interval={9 * 24 * 60 * 60 * 1000}
-        />
-        <DescriptionText>Maintenanced Landscape</DescriptionText>
+        <IncrementingNumber initialValue={0} finalValue={377} interval={3000} />
+        <DescriptionText>Maintained Landscape</DescriptionText>
       </Column>
       <Column>
-        <NumberText>26</NumberText>
+        <IncrementingNumber initialValue={0} finalValue={26} interval={3000} />
         <DescriptionText>Landscape Design Projects</DescriptionText>
       </Column>
       <Column>
-        <NumberText>11</NumberText>
+        <IncrementingNumber initialValue={0} finalValue={11} interval={3000} />
         <DescriptionText>Contractors Appointed</DescriptionText>
       </Column>
     </ColumnsContainer>
